@@ -18,12 +18,13 @@
 # include <stdio.h>
 # include <limits.h>
 # include <stddef.h>
-#include <stdint.h> //this got sizemax in it, maybe remove if it cannot be used and work around on calloc.
+# include <stdint.h> //this got sizemax in it, maybe remove if it cannot be used and work around on calloc.
 
-# typedef s_list
+typedef struct s_list
 {
 	//missing a few things but general structure for linked list is here
-	struct s_list *next;
+	void			*content;
+	struct s_list	*next;
 }	t_list;
 
 int		ft_isalpha(int c);
