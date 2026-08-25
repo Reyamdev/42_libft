@@ -6,11 +6,11 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/18 19:15:55 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/21 05:06:49 by reyam            ###   ########.fr       */
+/*   Updated: 2026/08/25 16:07:56 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The memmove() function copies len bytes from string src to string dst.  
+// The memmove() function copies len bytes from string src to string dst.
 // The two strings may overlap; the copy is always done in a non-destructive manner.
 
 // The safeguard for that is entirely about choosing a copy direction that won’t destroy source bytes before they’ve been read.
@@ -27,29 +27,30 @@
 void *ft_memmove(void *dest, const void *src, size_t len)
 {
 	unsigned char	*d;
-	unsigned char	*s;
-	size_t	i;
+	const unsigned char	*s;
 
 	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	i = 0;
-
+	s = (const unsigned char *)src;
 	if (d < s)
 	{
-		while (n > 0)
+		while (len > 0)
 		{
 			*d = *s;
 			d++;
 			s++;
-			n--;
+			len--;
 		}
 	}
 	else
 	{
-		while (n > 0)
+		d += len;
+		s += len;
+		while (len > 0)
 		{
-			n--;
-			d[n] = s[n];
+			d--;
+			s--;
+			*d = *s;
+			len--;
 		}
 	}
 	return (dest);

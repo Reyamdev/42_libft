@@ -6,11 +6,13 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 05:14:29 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/21 05:38:09 by reyam            ###   ########.fr       */
+/*   Updated: 2026/08/25 16:13:51 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // Compares the first n bytes of two memory areas.
+
+#include <stdlib.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
