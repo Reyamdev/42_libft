@@ -6,14 +6,14 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 05:39:57 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/21 05:42:52 by reyam            ###   ########.fr       */
+/*   Updated: 2026/08/27 19:56:55 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // needle in a haystack searching for at most len characters
-char	*strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;
