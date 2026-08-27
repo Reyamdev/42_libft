@@ -6,12 +6,11 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 14:20:12 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/27 16:23:24 by reyam            ###   ########.fr       */
+/*   Updated: 2026/08/27 16:24:51 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 // Counts how many words are separated by delimiter 'c'.
 static size_t	count_words(const char *str, char c)
