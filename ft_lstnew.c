@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/18 19:15:55 by reyam             #+#    #+#             */
-/*   Updated: 2026/09/01 23:25:53 by reyam            ###   ########.fr       */
+/*   Created: 2026/08/28 21:07:01 by reyam             #+#    #+#             */
+/*   Updated: 2026/09/02 23:58:45 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
-
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t len)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned char	*p;
-	unsigned char	x;
-	size_t			i;
+	t_list	*new_node;
 
-	p = str;
-	x = c;
-	i = 0;
-	while (i < len)
-	{
-		p[i] = x;
-		i++;
-	}
-	return (str);
+	new_node = malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }

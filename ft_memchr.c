@@ -6,7 +6,7 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 05:01:21 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/27 19:53:11 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/01 23:27:21 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	const unsigned char	*bytes;
 	size_t				i;
 
-	bytes = (const unsigned char *)s;
+	bytes = s;
 	i = 0;
 	while (i < n)
 	{

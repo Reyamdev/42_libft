@@ -6,7 +6,7 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 05:14:29 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/25 16:13:51 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/01 23:25:38 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	const unsigned char	*bytes2;
 	size_t				i;
 
-	bytes1 = (const unsigned char *)s1;
-	bytes2 = (const unsigned char *)s2;
+	bytes1 = s1;
+	bytes2 = s2;
 	i = 0;
 	while (i < n)
 	{

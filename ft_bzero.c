@@ -6,14 +6,13 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/18 19:15:55 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/21 03:19:06 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/01 23:36:32 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_bzero(void *str, size_t n)
+void ft_bzero(void *str, size_t n)
 {
 	ft_memset(str, 0, n);
-	return (str);
 }

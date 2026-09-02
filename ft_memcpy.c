@@ -6,7 +6,7 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/18 19:15:55 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/27 19:54:00 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/01 23:39:27 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*d;
-	unsigned char	*s;
+	const unsigned char	*s;
 	size_t			i;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
+	d = dest;
+	s = src;
 	i = 0;
 	while (i < n)
 	{
