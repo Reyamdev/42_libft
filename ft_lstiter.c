@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/28 21:07:01 by reyam             #+#    #+#             */
-/*   Updated: 2026/09/09 23:35:08 by reyam            ###   ########.fr       */
+/*   Created: 2026/09/09 23:04:53 by reyam             #+#    #+#             */
+/*   Updated: 2026/09/09 23:08:03 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Allocates memory (using malloc(3)) and returns
-// a new node. The ’content’ member variable is
-// initialized with the given parameter ’content’.
-// The variable ’next’ is initialized to NULL.
+// Iterates through the list ’lst’ and applies the
+// function ’f’ to the content of each node.
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*new_node;
-
-	new_node = malloc(sizeof(t_list));
-	if (!new_node)
-		return (NULL);
-	new_node->content = content;
-	new_node->next = NULL;
-	return (new_node);
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
