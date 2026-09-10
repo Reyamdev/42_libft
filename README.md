@@ -100,9 +100,9 @@ It was used for:
 
 * explaining the expected behavior of standard C library functions
 * clarifying C concepts such as pointers, `size_t`, `const`, integer promotion, and memory operations
-* reviewing implementations for logical mistakes
+* reviewing implementations
 * explaining edge cases such as null terminators and allocation overflow
 * improving comments and README documentation
 * assisting with development environment suggestion
 
-The project code itself was written and reviewed with the goal of understanding the implementation rather than copying library source code.
+The project code itself was written with the goal of understanding the implementation rather than copying library source code.
