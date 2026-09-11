@@ -6,11 +6,17 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 05:50:49 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/21 05:53:03 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:25:30 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * Allocates and returns a duplicate of 'src'.
+ * Copies the full string, including the terminating '\0'.
+ * Returns NULL if allocation fails.
+ */
 
 char	*ft_strdup(const char *src)
 {

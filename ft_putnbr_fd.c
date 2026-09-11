@@ -6,11 +6,17 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 16:59:53 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/28 17:19:45 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:28:18 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * Writes integer 'n' to the given file descriptor.
+ * Handles negative values and prints digits recursively.
+ * Uses a long to safely handle INT_MIN.
+ */
 
 void	ft_putnbr_fd(int n, int fd)
 {

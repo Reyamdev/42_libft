@@ -6,13 +6,19 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 05:53:33 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/21 06:48:03 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:43:50 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Allocates count * size bytes and initializes them to zero.
+/*
+ * Allocates memory for 'count' elements of 'size' bytes each.
+ * Checks for multiplication overflow before allocating.
+ * Initializes all allocated bytes to zero.
+ * Returns a pointer to the allocated memory, or NULL if allocation fails.
+ */
+
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;

@@ -6,13 +6,17 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 14:10:15 by reyam             #+#    #+#             */
-/*   Updated: 2026/09/08 14:14:20 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:36:07 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Returns the last node in the linked list.
+/*
+ * Traverses the linked list until it reaches the node
+ * whose 'next' pointer is NULL.
+ * Returns that last node, or NULL if the list is empty.
+ */
 
 t_list	*ft_lstlast(t_list *lst)
 {

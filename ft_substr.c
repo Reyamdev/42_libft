@@ -6,16 +6,29 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 14:54:00 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/25 17:11:06 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:48:27 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//take substring from input string
-//index start until provided len
-//malloc for len (+ 1 maybe)
-//return the substring or NULL if it fails.
-
 #include "libft.h"
+
+/*
+ * Returns a newly allocated substring of 's' starting at index 'start'.
+ * Copies at most 'len' characters and adds a terminating '\0'.
+ * Returns NULL if allocation fails.
+ * Returns an empty allocated string when 'start' is past the end.
+ */
+
+static char	*empty_substr(void)
+{
+	char	*substr;
+
+	substr = malloc(1);
+	if (!(substr))
+		return (NULL);
+	substr[0] = '\0';
+	return (substr);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -25,13 +38,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	s_len = ft_strlen(s);
 	if (start >= s_len)
-	{
-		substr = malloc(1);
-		if (!substr)
-			return (NULL);
-		substr[0] = '\0';
-		return (substr);
-	}
+		return (empty_substr());
 	if (len > s_len - start)
 		len = s_len - start;
 	substr = malloc(sizeof(char) * (len + 1));

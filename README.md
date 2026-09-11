@@ -17,11 +17,20 @@ The project focuses on core C programming concepts such as:
 * string manipulation
 * character handling
 * data types
+* linked lists
+* function pointers
+* file descriptors
 * static libraries
 * Makefiles
 * writing reusable and consistent C code
 
 The functions are implemented from scratch without calling the original libc functions they reproduce.
+
+The library is divided into three main parts:
+
+* Part 1: recreations of common libc functions
+* Part 2: additional string, memory, conversion, and output functions
+* Part 3: linked-list creation, traversal, modification, and cleanup functions
 
 ## Instructions
 
@@ -98,11 +107,9 @@ Useful references for this project include:
 AI was used as a learning and review aid during the project.
 It was used for:
 
-* explaining the expected behavior of standard C library functions
-* clarifying C concepts such as pointers, `size_t`, `const`, integer promotion, and memory operations
-* reviewing implementations
-* explaining edge cases such as null terminators and allocation overflow
-* improving comments and README documentation
-* assisting with development environment suggestion
+* explaining C concepts such as pointers, memory ownership, linked lists, function pointers, and file descriptors
+* suggesting tests and edge cases for different functions
+* clarifying compiler and linker errors
+* improving comments and documentation
 
-The project code itself was written with the goal of understanding the implementation rather than copying library source code.
+The implementations themselves were developed and corrected iteratively rather than copied from complete AI-generated solutions.

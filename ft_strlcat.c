@@ -6,11 +6,17 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 02:31:22 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/21 03:21:39 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:24:49 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * Appends 'src' to the end of 'dst' without exceeding 'dstsize'.
+ * Null-terminates the result if there is enough space.
+ * Returns the length it tried to create: initial dst length + src length.
+ */
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

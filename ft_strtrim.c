@@ -6,14 +6,17 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 18:11:13 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/25 19:28:36 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:10:32 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Returns a new string with characters from `set` trimmed
-// from the beginning and end of `s1`.
+/*
+ * Finds the first and last characters in 's1' that are not in 'set',
+ * then returns a newly allocated substring between those positions.
+ * Characters from 'set' are removed only from the beginning and end.
+ */
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -25,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = 0;
 	end = ft_strlen(s1);
-	while (start < end && ft_strchr(set,s1[start]))
+	while (start < end && ft_strchr(set, s1[start]))
 		start++;
 	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;

@@ -6,22 +6,31 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 23:09:25 by reyam             #+#    #+#             */
-/*   Updated: 2026/09/10 00:02:08 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:35:38 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// traverse old list
-//       ↓
-// apply f(content)
-//       ↓
-// create NEW node
-//       ↓
-// append to NEW list
-//       ↓
-// if malloc fails:
-// clear everything created so far
+/*
+ * Traverses the original list
+ *        ↓
+ * applies f(content)
+ *        ↓
+ * creates a NEW node with the transformed content
+ *        ↓
+ * appends it to a NEW list
+ *        ↓
+ * if allocation fails:
+ *        ↓
+ * 		deletes the newly created content
+ *        ↓
+ * 		clears every node already created with 'del'
+ *        ↓
+ *	 	returns NULL
+ *
+ * Returns the head of the new mapped list on success.
+ */
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

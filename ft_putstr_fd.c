@@ -6,13 +6,15 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 16:44:58 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/28 16:58:41 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:27:48 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Writes string 's' to the given file descriptor.
+/*
+ * Writes the null-terminated string 's' to the given file descriptor.
+ */
 
 void	ft_putstr_fd(char *s, int fd)
 {

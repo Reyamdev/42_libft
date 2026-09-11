@@ -6,13 +6,16 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/18 19:15:55 by reyam             #+#    #+#             */
-/*   Updated: 2026/09/01 23:25:53 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:51:32 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
-
 #include "libft.h"
+
+/*
+ * Fills 'len' bytes of memory at 'b' with the value 'c',
+ * converted to unsigned char.
+ */
 
 void	*ft_memset(void *str, int c, size_t len)
 {

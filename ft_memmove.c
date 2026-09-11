@@ -6,16 +6,20 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/18 19:15:55 by reyam             #+#    #+#             */
-/*   Updated: 2026/09/01 23:41:05 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:51:26 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Copies len bytes from src to dest.
-** Handles overlapping memory safely by choosing the right copy direction.
-*/
-
 #include "libft.h"
+
+/*
+ * Copies 'len' bytes from 'src' to 'dest'.
+ * Unlike memcpy, memmove safely handles overlapping memory regions
+ * by choosing the copy direction: forward when dest is before src,
+ * and backward when dest overlaps src from a higher address.
+ * The void pointers are cast to unsigned char pointers so the memory
+ * can be copied one byte at a time.
+ */
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {

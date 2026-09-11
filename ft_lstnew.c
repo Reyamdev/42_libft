@@ -6,16 +6,18 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 21:07:01 by reyam             #+#    #+#             */
-/*   Updated: 2026/09/09 23:35:08 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:33:55 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Allocates memory (using malloc(3)) and returns
-// a new node. The ’content’ member variable is
-// initialized with the given parameter ’content’.
-// The variable ’next’ is initialized to NULL.
+/*
+ * Allocates and returns a new linked-list node.
+ * Stores the provided 'content' pointer without copying or allocating it.
+ * Initializes 'next' to NULL because the new node is not linked yet.
+ * Returns NULL if the node allocation fails.
+ */
 
 t_list	*ft_lstnew(void *content)
 {

@@ -6,13 +6,18 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 04:17:42 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/21 05:39:07 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:49:45 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//same as strchr, except this only locates last instance of c.
-
 #include "libft.h"
+
+/*
+ * Returns a pointer to the last occurrence of 'c' in 's'.
+ * The terminating '\0' is also considered part of the string,
+ * so searching for '\0' returns a pointer to the terminator.
+ * Returns NULL if 'c' is not found.
+ */
 
 char	*ft_strrchr(const char *s, int c)
 {

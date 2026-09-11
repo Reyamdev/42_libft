@@ -6,13 +6,19 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 05:14:29 by reyam             #+#    #+#             */
-/*   Updated: 2026/09/01 23:25:38 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:56:35 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Compares the first n bytes of two memory areas.
+#include "libft.h"
 
-#include <stdlib.h>
+/*
+ * Compares the first 'n' bytes of memory areas 's1' and 's2'.
+ * The memory is treated as unsigned char values so each byte is compared
+ * in the range 0 to 255.
+ * Returns 0 if all compared bytes are equal, otherwise returns the
+ * difference between the first pair of differing bytes.
+ */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

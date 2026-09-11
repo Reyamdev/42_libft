@@ -6,13 +6,13 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 14:20:12 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/27 16:24:51 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:27:28 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Counts how many words are separated by delimiter 'c'.
+// Counts the number of words in 'str', using 'c' as the delimiter.
 static size_t	count_words(const char *str, char c)
 {
 	size_t	i;
@@ -29,7 +29,7 @@ static size_t	count_words(const char *str, char c)
 	return (count);
 }
 
-// Allocates and returns one word starting at pointer 's'.
+// Allocates one word starting at 's' and stores its length in 'len'.
 static char	*make_word(const char *s, char c, size_t *len)
 {
 	char	*word;
@@ -44,7 +44,7 @@ static char	*make_word(const char *s, char c, size_t *len)
 	return (word);
 }
 
-// Frees all previously allocated words and the outer array.
+// Frees all successfully allocated words and the outer array.
 static void	free_split(char **split, size_t words)
 {
 	size_t	i;
@@ -58,7 +58,7 @@ static void	free_split(char **split, size_t words)
 	free(split);
 }
 
-// Fills 'split' arr with words from 's'.
+// Extracts each word from 's' and stores it in the 'split' array.
 static int	split_fill(char **split, char const *s, char c)
 {
 	size_t	i;
@@ -87,7 +87,7 @@ static int	split_fill(char **split, char const *s, char c)
 	return (1);
 }
 
-// Splits 's' into newly allocated strings using 'c' as delimiter.
+// Splits 's' by delimiter 'c' into a NULL-terminated array of new strings.
 char	**ft_split(char const *s, char c)
 {
 	char	**split;

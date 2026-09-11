@@ -6,11 +6,20 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 05:48:09 by reyam             #+#    #+#             */
-/*   Updated: 2026/08/21 05:48:17 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:54:45 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * Converts the initial numeric part of 'str' to an integer.
+ * Skips leading whitespace, handles one optional '+' or '-' sign,
+ * then converts consecutive digits until a non-digit is reached.
+ * Returns 0 if no valid digit sequence is found.
+ * Builds the integer value digit by digit:
+ * res = res * 10 + current_digit.
+ */
 
 static int	generate_values(const char *str, int i)
 {

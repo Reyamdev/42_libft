@@ -6,15 +6,17 @@
 /*   By: reyam <reyam@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/18 19:15:55 by reyam             #+#    #+#             */
-/*   Updated: 2026/09/01 23:16:46 by reyam            ###   ########.fr       */
+/*   Updated: 2026/09/11 15:53:12 by reyam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//  The isprint() function tests for any printing character,
-// including space (‘ ’).  The value of the argument must
-//  be representable as an unsigned char or the value of EOF.
-
 #include "libft.h"
+
+/*
+ * Checks whether 'c' is a printable ASCII character.
+ * Printable characters are in the range 32 to 126 inclusive.
+ * Returns a non-zero value if printable, otherwise returns 0.
+ */
 
 int	ft_isprint(int c)
 {
